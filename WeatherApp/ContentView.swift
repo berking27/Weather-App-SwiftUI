@@ -97,10 +97,13 @@ struct BackgroundView: View {
     var isNight: Bool
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : .lightBlue]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .ignoresSafeArea()
+//        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : .lightBlue]),
+//                       startPoint: .topLeading,
+//                       endPoint: .bottomTrailing)
+//        .ignoresSafeArea()
+        ContainerRelativeShape()
+            .fill(isNight ? Color.blue.gradient : Color.black.gradient)
+            .ignoresSafeArea()
     }
 }
 
