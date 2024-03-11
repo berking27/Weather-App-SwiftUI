@@ -80,7 +80,7 @@ struct DailyWeatherView: View {
                 .foregroundStyle(.white)
             
             Image(systemName: weatherImage)
-                .renderingMode(.original)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 52, height: 52)
@@ -125,7 +125,7 @@ struct MainWeatherStatusView: View {
     var body: some View {
         VStack(spacing: 12) {
             Image(systemName: imageName)
-                .renderingMode(.original)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 180, height: 180)
